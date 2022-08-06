@@ -1,0 +1,12 @@
+build:
+    environment:
+        php: 7.4.0
+    nodes:
+        analysis:
+            tests:
+                override:
+                    - php-scrutinizer-run
+
+filter:
+    paths:
+        - src/

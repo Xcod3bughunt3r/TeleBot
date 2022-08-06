@@ -1,0 +1,49 @@
+{
+    "name": "php-telegram-bot/workspace",
+    "description": "Workspace for development and tests",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Tii",
+            "email": "mail@tii.one"
+        }
+    ],
+    "require": {
+        "longman/telegram-bot": "@dev",
+        "php-telegram-bot/fluent-keyboard": "@dev",
+        "vlucas/phpdotenv": "^5.4"
+    },
+    "autoload": {
+        "files": [
+            "helpers.php"
+        ],
+        "psr-4": {
+            "Longman\\TelegramBot\\Commands\\": "app/Telegram/Commands",
+            "App\\": "app"
+        }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "./packages/php-telegram-bot",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "./packages/fluent-keyboard",
+            "options": {
+                "symlink": true
+            }
+        }
+    ],
+    "require-dev": {
+        "pestphp/pest": "^1.21"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}

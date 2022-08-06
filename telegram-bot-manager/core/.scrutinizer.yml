@@ -1,0 +1,17 @@
+build:
+  environment:
+    php: 7.3.0
+  nodes:
+    analysis:
+      tests:
+        override:
+          - php-scrutinizer-run
+
+filter:
+  paths:
+    - src/
+    - utils/
+
+tools:
+  external_code_coverage:
+    timeout: 300

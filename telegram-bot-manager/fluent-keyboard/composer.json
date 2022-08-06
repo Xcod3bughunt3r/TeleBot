@@ -1,0 +1,37 @@
+{
+    "name": "php-telegram-bot/fluent-keyboard",
+    "description": "Fluent Keyboard builder for ReplyKeyboardMarkup and InlineKeyboardMarkup.",
+    "keywords": ["telegram", "bot", "api", "fluent", "keyboard", "builder"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tii",
+            "email": "mail@tii.one"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "files": [
+            "./src/helpers.php"
+        ],
+        "psr-4": {
+            "PhpTelegramBot\\FluentKeyboard\\": "./src"
+        }
+    },
+    "require": {
+        "php": "^8.0"
+    },
+    "require-dev": {
+        "pestphp/pest": "^1.21",
+        "ext-json": "*"
+    },
+    "scripts": {
+        "test": "vendor/bin/pest"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}

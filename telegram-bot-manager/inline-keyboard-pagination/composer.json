@@ -1,0 +1,60 @@
+{
+    "name": "php-telegram-bot/inline-keyboard-pagination",
+    "type": "library",
+    "description": "PHP Telegram Bot InlineKeyboard Pagination",
+    "keywords": ["telegram", "bot", "inline", "keyboard", "pagination", "callback", "query"],
+    "license": "MIT",
+    "homepage": "https://github.com/php-telegram-bot/inline-keyboard-pagination",
+    "support": {
+        "issues": "https://github.com/php-telegram-bot/inline-keyboard-pagination/issues",
+        "source": "https://github.com/php-telegram-bot/inline-keyboard-pagination"
+    },
+    "authors": [
+        {
+            "name": "Armando Lüscher",
+            "email": "armando@noplanman.ch",
+            "homepage": "https://noplanman.ch",
+            "role": "Developer"
+        },
+        {
+            "name": "Artie",
+            "email": "log.wil.log@gmail.com",
+            "homepage": "https://github.com/lartie",
+            "role": "Original developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0"
+    },
+    "require-dev": {
+        "php-parallel-lint/php-parallel-lint": "^1.3",
+        "phpunit/phpunit": "^9.5",
+        "squizlabs/php_codesniffer": "^3.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "TelegramBot\\InlineKeyboardPagination\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TelegramBot\\InlineKeyboardPagination\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "check-code": [
+            "vendor/bin/parallel-lint . --exclude vendor",
+            "vendor/bin/phpcs"
+        ],
+        "test": [
+            "vendor/bin/phpunit"
+        ],
+        "test-cov": [
+            "@putenv XDEBUG_MODE=coverage",
+            "vendor/bin/phpunit --coverage-clover coverage.xml"
+        ],
+        "test-cov-upload": [
+            "curl -s https://codecov.io/bash | bash"
+        ]
+    }
+}
