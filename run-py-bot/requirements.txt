@@ -15,7 +15,7 @@ pycares==3.1.1
 pycparser==2.20
 pytz==2020.4
 typing-extensions==3.7.4.3
-ujson==4.0.1
+ujson==5.4.0
 uvloop==0.14.0
 yarl==1.6.3
 python-dotenv==0.17.0
